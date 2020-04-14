@@ -9,7 +9,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 abstract class UseCase<out Type, in Params> where Type : Any {
-    var enableTesting: Boolean = false
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 
     abstract suspend fun run(params: Params): Either<Exception, Type>
@@ -20,9 +19,7 @@ abstract class UseCase<out Type, in Params> where Type : Any {
         onResult: (Either<Exception, Type>) -> Unit = {}
     ) {
         scope.launch {
-            val job =
-                if (enableTesting) withContext(scope.coroutineContext) { run(params) }
-                else withContext(ioDispatcher) { run(params) }
+            val job = withContext(ioDispatcher) { run(params) }
             withContext(scope.coroutineContext) { onResult(job) }
         }
     }

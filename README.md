@@ -1,5 +1,4 @@
-# StarlingTechTest
-Simon Featherstone +44 07909 920671 mailto:simon@wedgetech.co.uk
+# TechTest
 
 ## Assumptions
 UI is a very basic. Task was more about the API interaction

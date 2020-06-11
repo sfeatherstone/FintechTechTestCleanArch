@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="textLayoutMargin">5dp</dimen>
+    <dimen name="textSizeBerry">14sp</dimen>
+</resources>

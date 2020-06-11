@@ -1,2 +1,2 @@
-rootProject.name='StarlingRoundUp'
+rootProject.name='PropertyPriceAverage'
 include ':app'

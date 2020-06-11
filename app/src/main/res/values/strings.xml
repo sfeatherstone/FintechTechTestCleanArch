@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">StarlingRoundUp</string>
+    <string name="app_name">Property Price Average</string>
+    <string name="main_activity_question">What is the average property price?</string>
+    <string name="main_activity_loading">Loading</string>
+    <string name="main_activity_error">Error</string>
+    <string name="main_activity_no_properties_error">No Properties found</string>
 </resources>
